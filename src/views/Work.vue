@@ -1,7 +1,12 @@
 <template>
-  <div class="work">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class='work'>
+    <div class='work-block'>
+      <div class='work-stacked'>
+        <img src='' alt=''>
+        <img src='' alt=''>
+      </div>
+      <img src='' alt=''>
+    </div>
   </div>
 </template>
 
@@ -9,8 +14,20 @@
 
 export default {
   name: 'work',
-  components: {
-    
-  }
+  components: {}
 }
 </script>
+
+<style scoped>
+  .work {
+    
+  }
+  .work-block {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  .work-stacked {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+</style>

@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <NavBar />
-    <router-view/>
+    <NavBar class='navbar'/>
+    <transition name='fade'>
+      <router-view class='content'/>
+    </transition>
   </div>
 </template>
 
@@ -66,5 +68,24 @@ table {
   overflow: scroll;
   background-color: black;
   color: white;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+.navbar {
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+}
+.content {
+  position: absolute;
+  /* z-index: 1; */
+  top: 0;
+  left: 0;
+  width: 100vw;
+
 }
 </style>

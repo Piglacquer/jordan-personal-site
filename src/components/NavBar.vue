@@ -1,6 +1,6 @@
 <template>
-  <div class='nav'>
-    <div>
+  <div id='nav'>
+    <div class='main'>
       <router-link class='link' to='/'>Home</router-link>
     </div>
     <div class='links'>
@@ -18,23 +18,25 @@ export default {
 </script>
 
 <style scoped>
-  .nav {
+  #nav {
     display: flex;
     flex-flow: row nowrap;
+    background-color: transparent;
     justify-content: space-between;
     align-items: center;
     height: 10vh;
-    margin: 0 20px 0 20px;
   }
-
+  .main {
+    padding-left: 20px;
+  }
   .links {
     width: 25vw;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
+    padding-right: 20px;
   }
-
   .link {
     text-decoration: none;
     color: white;
