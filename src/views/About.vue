@@ -26,6 +26,7 @@ export default {
     height: 100vh;
     overflow: scroll;
     grid-template-columns: 10vw 20vw 20vw 20vw 20vw 10vw;
+    background-color: black;
   }
   .title {
     grid-column-start: 2;
